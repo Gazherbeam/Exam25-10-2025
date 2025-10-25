@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Blog — HTML · CSS · Git · Tailwind</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+    <header class="bg-white shadow">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+            <h1 class="text-2xl font-semibold">Dev Blog</h1>
+            <nav class="space-x-4 text-sm">
+                <a href="#topics" class="text-blue-600 hover:underline">Topics</a>
+                <a href="#posts" class="text-blue-600 hover:underline">Posts</a>
+                <a href="#about" class="text-blue-600 hover:underline">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+   
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row items-center gap-6">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold">Learn Web Dev: HTML, CSS, Git, and Tailwind</h2>
+                    <p class="mt-2 text-gray-600">Short tutorials, examples and resources to get you productive fast. Includes examples with images and tables.</p>
+                    <div class="mt-4 flex gap-3">
+                       
+                       
+                    </div>
+                </div>
+                <img src="https://cdn.dribbble.com/userupload/10482209/file/original-76088503f103d8961cd1df031895280d.png?resize=752x&vertical=center" alt="Dev blog illustration" class="w-64 h-36 object-cover rounded">
+            </div>
+        </section>
+
+        <!-- Topics -->
+        <section id="topics" class="mb-10">
+            <h3 class="text-xl font-semibold mb-4">Topics</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- HTML -->
+                <article class="bg-white rounded-lg shadow p-4">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" alt="HTML" class="w-full h-36 object-cover rounded">
+                    <h4 class="mt-3 font-semibold">HTML</h4>
+                    <p class="text-sm text-gray-600 mt-1">Structure pages with semantic HTML and accessibility best practices.</p>
+                    <a href="htmltagsref.html" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn HTML</a>
+                </article>
+
+                <!-- CSS -->
+                <article class="bg-white rounded-lg shadow p-4">
+                    <img src="https://www.milesweb.com/blog/wp-content/uploads/2025/06/what-is-css.png" alt="CSS" class="w-full h-36 object-cover rounded">
+                    <h4 class="mt-3 font-semibold">CSS</h4>
+                    <p class="text-sm text-gray-600 mt-1">Style your web pages with modern CSS techniques and layouts.</p>
+                    <a href="css.html" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn CSS</a>
+
+                </article>
+
+                <!-- Tailwind -->
+                <article class="bg-white rounded-lg shadow p-4">
+                    <img src="https://wpdean.com/wp-content/uploads/2024/05/tailwind-css-1024x512.jpg" alt="Tailwind CSS" class="w-full h-36 object-cover rounded">
+                    <h4 class="mt-3 font-semibold">Tailwind</h4>
+                    <p class="text-sm text-gray-600 mt-1">Utility-first styling with practical examples and component patterns.</p>
+                    <a href="tailwind.html" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn Tailwind</a>
+                </article>
+        </section>
+
+        <!-- Recent Posts -->
+        <section id="posts" class="mb-10">
+            <h3 class="text-xl font-semibold mb-4">Recent Posts</h3>
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-3 text-sm font-medium">#</th>
+                            <th class="px-4 py-3 text-sm font-medium">Title</th>
+                            <th class="px-4 py-3 text-sm font-medium">Topic</th>
+                            <th class="px-4 py-3 text-sm font-medium">||</th>
+                            <th class="px-4 py-3 text-sm font-medium">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="px-4 py-3 text-sm">1</td>
+                            <td class="px-4 py-3 text-sm">Semantic HTML: Building Accessible Layouts</td>
+                            <td class="px-4 py-3 text-sm">HTML</td>
+                            <td class="px-4 py-3 text-sm">
+                                
+                            </td>
+                            <td class="px-4 py-3 text-sm">2025-10-01</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-4 py-3 text-sm">2</td>
+                            <td class="px-4 py-3 text-sm">Responsive Grids with CSS Grid</td>
+                            <td class="px-4 py-3 text-sm">CSS</td>
+                            <td class="px-4 py-3 text-sm">
+                              
+                            </td>
+                            <td class="px-4 py-3 text-sm">2025-09-20</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-4 py-3 text-sm">3</td>
+                            <td class="px-4 py-3 text-sm">Git Branching Strategies for Teams</td>
+                            <td class="px-4 py-3 text-sm">Git</td>
+                            <td class="px-4 py-3 text-sm">
+                           
+                            </td>
+                            <td class="px-4 py-3 text-sm">2025-08-15</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-4 py-3 text-sm">4</td>
+                            <td class="px-4 py-3 text-sm">Tailwind Components: Buttons & Cards</td>
+                            <td class="px-4 py-3 text-sm">Tailwind</td>
+                            <td class="px-4 py-3 text-sm">
+                    
+                            </td>
+                            <td class="px-4 py-3 text-sm">2025-07-30</td>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- HTML Tags Reference -->
+            <section class="mb-10">
+                <h3 class="text-xl font-semibold mb-4">Common HTML Tags Reference</h3>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-medium mb-2">Structure Tags</h4>
+                            <p class="text-sm">Learn more about HTML structure tags.</p>
+                            <a href="htmltagsref.html" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Structure Tags</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- Small examples: code & resources -->
+            <section id="about" class="mb-10">
+                <h3 class="text-xl font-semibold mb-4">Quick Git Cheatsheet</h3>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded overflow-auto text-sm">
+    git add .
+    git commit -m 'update files'
+    git push
+    git pull
+    git clone git@github.com:LecarreGavini/web-dev-1.git
+    git init
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    cat C:\Users\{UserName}\.ssh\id_ed25519.pub
+                    </pre>
+                    <p class="text-sm text-gray-600 mt-3">Use these commands to get started.</p>
+                </div>
+            </section>
+    </main>
+
+    <footer class="bg-white border-t">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <p>&copy; 2025 Dev Blog</p>
+            <p class="mt-2 md:mt-0">Built with HTML, CSS and Tailwind</p>
+        </div>
+    </footer>
+
+</body>
+</html> 

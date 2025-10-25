@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tailwind CSS — Quick Guide & Custom CSS</title>
+    <!-- Quick preview via Tailwind Play CDN (good for demos, not recommended for production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="How to use Tailwind CSS and integrate custom CSS (@apply, @layer, tailwind.config.js and build steps)" />
+    <style>
+        /* Small visual container for the page (won't affect Tailwind usage examples) */
+        body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 2rem; background: #f8fafc; color: #0f172a; }
+        .card { background: white; border-radius: .5rem; box-shadow: 0 1px 2px rgba(2,6,23,.06); padding: 1.25rem; margin-bottom: 1rem; }
+        pre code { display: block; white-space: pre-wrap; background: #0f172a; color: #e6eef8; padding: .75rem; border-radius:.375rem; overflow:auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
+    </style>
+</head>
+
+<iframe class="aspect-video ..." src="https://www.youtube.com/watch?v=6biMWgD6_JY"></iframe>
+<body>
+
+    <h1 class="text-2xl font-semibold mb-4">Tailwind CSS — Quick Guide & Custom CSS</h1>
+
+    <div class="card">
+        <h2 class="text-lg font-medium mb-2">Quickstart (Play CDN)</h2>
+        <p class="mb-2">For quick prototypes include the CDN script (not recommended for production):</p>
+        <pre><code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+        <p>Then use utility classes anywhere:</p>
+        <div class="p-4 bg-indigo-50 rounded">
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Tailwind Button</button>
+            <span class="ml-3 text-sm text-gray-600">Resize the window to see responsive classes at work.</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 class="text-lg font-medium mb-2">Recommended: Build with Tailwind (npm + PostCSS)</h2>
+        <p class="mb-2">Steps to set up a production-ready build:</p>
+        <pre><code># initialize and install
+npm init -y
+npm install -D tailwindcss postcss autoprefixer
+
+# create config and input/output
+npx tailwindcss init -p
+# create src/input.css (see below), then build:
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+</code></pre>
+        <p class="mb-2">Contents of <code>src/input.css</code>:</p>
+        <pre><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom layers can go here */
+@layer base {
+    /* small base reset or typography tweaks */
+    body { @apply bg-slate-50 text-slate-900; }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center px-4 py-2 rounded-md font-medium bg-indigo-600 text-white hover:bg-indigo-700;
+    }
+}
+</code></pre>
+        <p class="mb-2">Sample <code>tailwind.config.js</code> (extend theme and purge content):</p>
+        <pre><code>module.exports = {
+    content: [
+        "./src/**/*.{html,js}",
+        "./public/index.html",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                brand: {
+                    DEFAULT: '#1e3a8a',
+                    light: '#3b82f6'
+                }
+            }
+        }
+    },
+    plugins: [],
+}</code></pre>
+    </div>
+
+    <div class="card">
+        <h2 class="text-lg font-medium mb-2">Custom CSS techniques</h2>
+        <ul class="list-disc pl-5 mb-2">
+            <li><strong>@apply</strong> — compose utilities into a custom class (example: <code>.btn</code> above).</li>
+            <li><strong>@layer base/components/utilities</strong> — control where your custom rules sit relative to Tailwind's generated CSS.</li>
+            <li><strong>tailwind.config.js</strong> — add colors, spacing, fonts, or enable plugins and custom variants.</li>
+            <li><strong>Purge/content</strong> — list files where classes appear so unused utilities are removed in production builds.</li>
+        </ul>
+
+        <p class="mb-2"><strong>Example: custom component with responsive and state variants</strong></p>
+        <pre><code>@layer components {
+    .card {
+        @apply p-6 rounded-lg bg-white shadow hover:shadow-lg transition;
+    }
+    .card-title {
+        @apply text-lg font-semibold mb-2;
+    }
+    .card-desc {
+        @apply text-sm text-slate-600;
+    }
+}</code></pre>
+
+        <div class="mt-3 card">
+            <div class="card">
+                <div class="card-title">Card Title</div>
+                <div class="card-desc">This card uses a custom component layer (.card) composed with @apply.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 class="text-lg font-medium mb-2">Tips & Best Practices</h2>
+        <ul class="list-disc pl-5">
+            <li>Prefer utility classes for layout and small patterns; create named components for reusable UI (buttons, cards).</li>
+            <li>Keep the <code>content</code> array in config accurate so tree-shaking removes unused CSS.</li>
+            <li>Use design tokens (extend theme) instead of hard-coded values in @apply to remain consistent.</li>
+            <li>For large projects, consider component extraction (e.g., as React/Vue components) and design system documentation.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2 class="text-lg font-medium mb-2">Short Reference</h2>
+        <p class="mb-2"><strong>Responsive</strong>: prefix with <code>sm:</code>, <code>md:</code>, <code>lg:</code>, etc.</p>
+        <p class="mb-2"><strong>State</strong>: <code>hover:</code>, <code>focus:</code>, <code>active:</code>, <code>disabled:</code>.</p>
+        <p class="mb-2"><strong>Pseudo-class</strong>: <code>dark:</code> (if using dark mode), custom variants via plugins are possible.</p>
+    </div>
+
+    <footer style="font-size:.9rem;color:#475569;margin-top:1rem;">
+        <p>Use the CDN for quick demos. For production, build Tailwind with PostCSS and configure <code>content</code> to purge unused classes.</p>
+    </footer>
+
+</body>
+</html>
