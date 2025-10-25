@@ -1,148 +1,182 @@
-<!-- Append this to the bottom of your file to show usage examples -->
-<section class="mt-8 mb-10">
-    <a href="index.html" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Home</a>
-    <h3 class="text-xl font-semibold mb-4">Usage Examples</h3>
-    <div class="bg-white rounded-lg shadow p-6 space-y-6 text-sm">
-<section class="mb-10">
-    <h3 class="text-xl font-semibold mb-4">Common HTML Tags Reference</h3>
-    <div class="bg-white rounded-lg shadow p-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <h4 class="font-medium mb-2">Structure Tags</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;html&gt;</code> - Root element of an HTML document.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;head&gt;</code> - Contains meta-information about the document.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;body&gt;</code> - Encloses the content of the document.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;header&gt;</code> - Defines the header section of a document or section.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;main&gt;</code> - Represents the main content of the document.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;footer&gt;</code> - Contains footer information for a document or section.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;nav&gt;</code> - Defines navigation links.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;section&gt;</code> - Represents a thematic grouping of content.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;img&gt;</code> - Embeds an image in the document.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;p&gt;</code> - Defines a paragraph of text.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;a&gt;</code> - Creates a hyperlink to another resource.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;div&gt;</code> - A generic container for grouping content.</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-medium mb-2">Content Tags</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;p&gt;</code> - Defines a paragraph of text.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;h1&gt; to &lt;h6&gt;</code> - Define headings, with &lt;h1&gt; being the highest level.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;img&gt;</code> - Embeds an image; use the <code>&lt;img src=&quot;url&quot;&gt;</code> attribute to specify the image source.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;a&gt;</code> - Creates a hyperlink; use <code>href</code> attribute to specify the link target.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;ul&gt;/&lt;li&gt;</code> - Defines an unordered list; use <code>&lt;li&gt;</code> for list items.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;table&gt;</code> - Creates a table; use <code>&lt;tr&gt;</code> for rows and <code>&lt;td&gt;</code> for cells.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;div&gt;</code> - A generic container for grouping content.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;span&gt;</code> - An inline container for text or other elements.</li>
-                    <li><code class="bg-gray-100 px-2 py-1">&lt;a href=&quot;&quot;&gt;</code> - Hyperlink; specify the destination URL in the <code>href</code> attribute.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- Example: Basic page structure -->
-        <article>
-            <h4 class="font-medium mb-2">Basic page structure</h4>
-            <!-- header, nav, main, footer -->
-            <header class="mb-2">
-                <h1>My Website</h1>
-                <p class="text-xs">A short tagline</p>
-            </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Blog — HTML Reference</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
 
-            <nav class="mb-2">
-                <a href="#home" class="mr-2">Home</a>
-                <a href="#about" class="mr-2">About</a>
-                <a href="#contact">Contact</a>
+    <header class="bg-white shadow">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+            <h1 class="text-2xl font-semibold">Dev Blog</h1>
+            <nav class="space-x-4 text-sm">
+                <a href="index.html" class="text-blue-600 hover:underline">Home</a>
+                <a href="#topics" class="text-blue-600 hover:underline">Topics</a>
+                <a href="#posts" class="text-blue-600 hover:underline">Posts</a>
+                <a href="#about" class="text-blue-600 hover:underline">About</a>
             </nav>
+        </div>
+    </header>
 
-            <main id="home" class="mb-2">
-                <section>
-                    <h2>Welcome</h2>
-                    <p>This is the main content area. Use &lt;main&gt; for primary page content.</p>
-                </section>
-            </main>
+    <main class="max-w-5xl mx-auto px-4 py-8">
 
-            <footer>
-                <p class="text-xs">© 2025 Example</p>
-            </footer>
-        </article>
-
-        <!-- Example: Images and links -->
-        <article>
-            <h4 class="font-medium mb-2">Image and link</h4>
-            <!-- img with src and alt; a with href and target -->
-            <img src="https://via.placeholder.com/150" alt="Placeholder image" />
-            <p>
-                Visit
-                <a href="https://example.com" target="_blank" rel="noopener">Example.com</a>
-                for more info.
-            </p>
-        </article>
-
-        <!-- Example: Headings, paragraphs, inline elements -->
-        <article>
-            <h4 class="font-medium mb-2">Headings, paragraphs and inline elements</h4>
-            <h1>Heading H1</h1>
-            <h2>Heading H2</h2>
-            <p>Paragraph text with an inline <span class="font-semibold">span</span> and <code>&lt;code&gt;</code> sample.</p>
-        </article>
-
-        <!-- Example: Lists -->
-        <article>
-            <h4 class="font-medium mb-2">Lists</h4>
-            <ul>
-                <li>Unordered item A</li>
-                <li>Unordered item B
-                    <ul>
-                        <li>Nested item</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ol>
-                <li>Ordered item 1</li>
-                <li>Ordered item 2</li>
-            </ol>
-        </article>
-
-        <!-- Example: Table -->
-        <article>
-            <h4 class="font-medium mb-2">Table</h4>
-            <table class="border-collapse">
-                <thead>
-                    <tr>
-                        <th class="pr-4">Name</th>
-                        <th class="pr-4">Age</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Alice</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>Bob</td>
-                         <td>28</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-
-        <!-- Example: Generic containers -->
-        <article>
-            <h4 class="font-medium mb-2">Div and section usage</h4>
-            <div class="p-2 border">
-                <section>
-                    <h5>Sub-section</h5>
-                    <p>Use &lt;div&gt; as a block container and &lt;section&gt; for thematically grouped content.</p>
-                </section>
+        <!-- Styled to match the Dev Blog layout -->
+        <section class="max-w-5xl mx-auto px-4 py-8 mb-10">
+            <div class="flex items-center justify-between mb-6">
+                <a href="index.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Home</a>
+                <h3 class="text-xl font-semibold">Usage Examples</h3>
             </div>
-        </article>
 
-    </div>
-</section>
+            <div class="bg-white rounded-lg shadow p-6 space-y-6 text-sm">
+                <!-- Common HTML Tags Reference -->
+                <section class="mb-6">
+                    <h4 class="text-lg font-medium mb-3">Common HTML Tags Reference</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <article class="bg-white rounded-lg shadow p-4">
+                            <h5 class="font-medium mb-2">Structure Tags</h5>
+                            <ul class="space-y-2 text-sm">
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;html&gt;</code> - Root element of an HTML document.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;head&gt;</code> - Contains meta-information about the document.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;body&gt;</code> - Encloses the content of the document.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;header&gt;</code> - Header section.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;main&gt;</code> - Main content area.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;footer&gt;</code> - Footer section.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;nav&gt;</code> - Navigation links.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;section&gt;</code> - Thematic grouping.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;img&gt;</code> - Image element.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;div&gt;</code> - Generic container.</li>
+                            </ul>
+                        </article>
 
+                        <article class="bg-white rounded-lg shadow p-4">
+                            <h5 class="font-medium mb-2">Content Tags</h5>
+                            <ul class="space-y-2 text-sm">
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;p&gt;</code> - Paragraph.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;h1&gt;–&lt;h6&gt;</code> - Headings.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;</code> - Image with source and alt.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;a href=&quot;...&quot;&gt;</code> - Link (use href).</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;ul&gt;/&lt;li&gt;</code> - Unordered list.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;table&gt;</code> - Tables with &lt;tr&gt; and &lt;td&gt;.</li>
+                                <li><code class="bg-gray-100 px-2 py-1 rounded">&lt;span&gt;</code> - Inline container.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
 
+                <!-- Examples grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Basic page structure -->
+                    <article class="bg-white rounded-lg shadow p-4">
+                        <h5 class="font-medium mb-2">Basic page structure</h5>
+                        <header class="mb-2">
+                            <h1 class="text-lg font-semibold">My Website</h1>
+                            <p class="text-xs text-gray-600">A short tagline</p>
+                        </header>
 
+                        <nav class="mb-2 text-sm">
+                            <a href="#home" class="text-blue-600 hover:underline mr-2">Home</a>
+                            <a href="#about" class="text-blue-600 hover:underline mr-2">About</a>
+                            <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+                        </nav>
 
+                        <main id="home" class="mb-2">
+                            <section>
+                                <h2 class="font-semibold">Welcome</h2>
+                                <p class="text-gray-600">This is the main content area. Use &lt;main&gt; for primary page content.</p>
+                            </section>
+                        </main>
+
+                        <footer class="text-xs text-gray-600">© 2025 Example</footer>
+                    </article>
+
+                    <!-- Image and link -->
+                    <article class="bg-white rounded-lg shadow p-4">
+                        <h5 class="font-medium mb-2">Image and link</h5>
+                        <img src="https://via.placeholder.com/300x150" alt="Placeholder" class="w-full h-36 object-cover rounded mb-3">
+                        <p class="text-sm text-gray-600">
+                            Visit
+                            <a href="https://example.com" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Example.com</a>
+                            for more info.
+                        </p>
+                    </article>
+
+                    <!-- Headings, paragraphs and inline elements -->
+                    <article class="bg-white rounded-lg shadow p-4">
+                        <h5 class="font-medium mb-2">Headings & Inline</h5>
+                        <h1 class="text-lg font-semibold">Heading H1</h1>
+                        <h2 class="text-md font-medium mt-1">Heading H2</h2>
+                        <p class="mt-2 text-sm">Paragraph with an inline <span class="font-semibold">span</span> and <code class="bg-gray-100 px-1 rounded">&lt;code&gt;</code> sample.</p>
+                    </article>
+
+                    <!-- Lists -->
+                    <article class="bg-white rounded-lg shadow p-4">
+                        <h5 class="font-medium mb-2">Lists</h5>
+                        <ul class="list-disc pl-5 mb-3 text-sm">
+                            <li>Unordered item A</li>
+                            <li>Unordered item B
+                                <ul class="list-disc pl-5 mt-1">
+                                    <li>Nested item</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ol class="list-decimal pl-5 text-sm">
+                            <li>Ordered item 1</li>
+                            <li>Ordered item 2</li>
+                        </ol>
+                    </article>
+
+                    <!-- Table -->
+                    <article class="bg-white rounded-lg shadow p-4">
+                        <h5 class="font-medium mb-2">Table</h5>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse text-sm">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="px-3 py-2 font-medium">Name</th>
+                                        <th class="px-3 py-2 font-medium">Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-t">
+                                        <td class="px-3 py-2">Alice</td>
+                                        <td class="px-3 py-2">30</td>
+                                    </tr>
+                                    <tr class="border-t">
+                                        <td class="px-3 py-2">Bob</td>
+                                        <td class="px-3 py-2">28</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!-- Div and section usage -->
+                    <article class="bg-white rounded-lg shadow p-4">
+                        <h5 class="font-medium mb-2">Div & Section</h5>
+                        <div class="p-2 border rounded">
+                            <section>
+                                <h6 class="font-medium">Sub-section</h6>
+                                <p class="text-sm text-gray-600">Use &lt;div&gt; as a block container and &lt;section&gt; for thematically grouped content.</p>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <p>&copy; 2025 Dev Blog</p>
+            <p class="mt-2 md:mt-0">Built with HTML, CSS and Tailwind</p>
+        </div>
+    </footer>
+
+</body>
+</html>
